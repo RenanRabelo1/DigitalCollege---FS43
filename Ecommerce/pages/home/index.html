@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lumina, uma vitrine digital de produtos selecionados."
+    />
+    <meta name="theme-color" content="#0c0c0f" />
+    <title>Lumina | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header" aria-label="Cabeçalho da Lumina">
+        <div class="header-row">
+          <a class="brand" href="#top" aria-label="Lumina - início">
+            <span class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                <path d="M3 6h18M16 10a4 4 0 0 1-8 0" />
+              </svg>
+            </span>
+            <span>Lumina</span>
+          </a>
+
+          <button class="profile-button" type="button" aria-label="Abrir perfil">
+            <img id="user-avatar" src="" alt="Foto de Mariana Silva" />
+          </button>
+        </div>
+
+        <form class="search-form" role="search" novalidate>
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7.5" />
+            <path d="m20 20-3.7-3.7" />
+          </svg>
+          <label class="sr-only" for="product-search">Buscar produtos</label>
+          <input
+            id="product-search"
+            type="search"
+            inputmode="search"
+            autocomplete="off"
+            placeholder="Buscar produtos..."
+          />
+          <button class="search-submit" type="submit">Buscar</button>
+        </form>
+      </header>
+
+      <main id="top" class="home-content">
+        <nav class="category-list" aria-label="Categorias de produtos">
+          <button class="category-button is-active" type="button" data-category="Todos" aria-pressed="true">
+            Todos
+          </button>
+          <button class="category-button" type="button" data-category="Eletrônicos" aria-pressed="false">
+            Eletrônicos
+          </button>
+          <button class="category-button" type="button" data-category="Moda" aria-pressed="false">
+            Moda
+          </button>
+          <button class="category-button" type="button" data-category="Casa &amp; Decoração" aria-pressed="false">
+            Casa &amp; Decoração
+          </button>
+          <button class="category-button" type="button" data-category="Esportes" aria-pressed="false">
+            Esportes
+          </button>
+          <button class="category-button" type="button" data-category="Beleza" aria-pressed="false">
+            Beleza
+          </button>
+        </nav>
+
+        <p id="filter-status" class="filter-status" aria-live="polite"></p>
+
+        <article id="hero" class="hero" aria-labelledby="hero-title">
+          <img id="hero-image" class="hero-image" src="" alt="" />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="eyebrow">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m12 2 2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6Z" />
+              </svg>
+              Lançamentos
+            </span>
+            <h1 id="hero-title"></h1>
+            <p id="hero-description"></p>
+            <button id="hero-buy" class="primary-button" type="button">Comprar agora</button>
+          </div>
+        </article>
+
+        <div id="catalog-content">
+          <section class="home-section" aria-labelledby="best-sellers-title">
+            <div class="section-heading">
+              <h2 id="best-sellers-title">Mais vendidos</h2>
+              <button id="show-all" class="text-button" type="button">
+                Ver todos
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14m-7-7 7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <div id="best-sellers" class="product-grid"></div>
+          </section>
+
+          <section class="home-section" aria-labelledby="offers-title">
+            <div class="section-heading section-heading--left">
+              <span class="offer-symbol" aria-hidden="true">♨</span>
+              <h2 id="offers-title">Ofertas imperdíveis</h2>
+            </div>
+            <div id="offers" class="offer-grid"></div>
+          </section>
+
+          <section class="home-section last-section" aria-labelledby="new-arrivals-title">
+            <div class="section-heading">
+              <h2 id="new-arrivals-title">Lançamentos</h2>
+            </div>
+            <div id="new-arrivals" class="new-arrivals"></div>
+          </section>
+        </div>
+
+        <section id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h2>Nenhum produto encontrado</h2>
+          <p>Tente buscar outro termo ou escolher uma categoria diferente.</p>
+          <button id="clear-filters" class="primary-button" type="button">Limpar filtros</button>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Navegação principal">
+        <button class="nav-button is-active" type="button" data-action="home" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z" />
+          </svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-button" type="button" data-action="explore">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m16 8-2.5 5.5L8 16l2.5-5.5Z" />
+          </svg>
+          <span>Explore</span>
+        </button>
+        <button class="nav-button" type="button" data-action="cart">
+          <span class="nav-icon-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span id="cart-count" class="cart-count" hidden>0</span>
+          </span>
+          <span>Cart</span>
+        </button>
+        <button class="nav-button" type="button" data-action="profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="7" r="4" />
+            <path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1Z" />
+          </svg>
+          <span>Profile</span>
+        </button>
+      </nav>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="../../data/api.js"></script>
+    <script src="../../data/products.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

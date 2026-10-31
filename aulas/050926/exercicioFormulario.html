@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        <br>
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+
+        <br>
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+
+        <br>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado">
+            <option value="SP" selected>São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados Pofissionais</legend>
+        <label for="email">Escolaridade:
+        <select id="escolaridade" name="escolaridade">
+            <option value="fundamental">Ensino Fundamental</option>
+            <option value="medio">Ensino Médio</option>
+            <option value="superior">Ensino Superior</option>
+            </label>
+        </select>
+        <br>
+        <label>Área de Atuação:
+            <input type="radio" name="cargo" value="1"> 
+            Gerencia
+            <input type="radio" name="cargo" value="2">
+            Financeiro
+            <input type="radio" name="cargo" value="3">
+            Recepção
+        </label>
+        <br>
+        <br>
+        <label>Área de Interesse:
+            <br>
+            <input type="checkbox" name="interesse" value="1">
+            Computação
+            <input type="checkbox" name="interesse" value="2">
+            Biologia
+            <input type="checkbox" name="interesse" value="3">
+            Meio Ambiente
+            <input type="checkbox" name="interesse" value="4">
+            Engenharia
+            <input type="checkbox" name="interesse" value="5">
+            História
+        </label>
+
+        <br>
+
+    <label>Mini-Curriculo: 
+
+<textarea name="curriculo" id="curriculo" cols="30" rows="7"></textarea>
+    </label>
+
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+
+
+
+</body>
+</html>
