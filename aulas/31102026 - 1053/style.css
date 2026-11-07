@@ -1,0 +1,45 @@
+.carousel-inner {
+    height: 70vh !important;
+}
+.image {
+    height: 70vh !important;
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+.card {
+    height: 60vh;
+}
+.card-body h4 {
+    font-size: 16px;
+}
+.card-body p {
+    font-size: 13px;
+}
+.card-body a {
+    font-size: 13px;
+}
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.accordion {
+    width: 50vw;
+}
+#dedim-gouveia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+#dedim-gouveia h2 {
+    font-size: 24px;
+    margin-bottom: 3vh;
+}
